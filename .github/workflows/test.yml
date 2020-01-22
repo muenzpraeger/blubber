@@ -1,0 +1,39 @@
+# Unique name for this workflow
+name: Salesforce DX CI (packaging)
+
+# Definition when the workflow should run
+on:
+  push:
+      branches:
+          - master
+
+# Jobs to be executed
+jobs:
+    stuff:
+        runs-on: ubuntu-latest
+        steps:
+            # Checkout the code in the pull request
+            - name: 'Checkout source code'
+              uses: actions/checkout@v2
+
+            # Checkout the code in the pull request
+            - name: 'Checkout source code'
+              runs: ls -lrt >> test2.txt
+
+            # Re-add changes back to source
+            - name: 'Create branch'
+              uses: peter-evans/create-pull-request@v2
+              with:
+                  branch: 'master'
+                  title: 'Added new package version ID'
+                  commit-message: 'Added new package version ID'
+                  branch: 'auto/package-version-update'
+                  token: ${{ secrets.GITHUB_TOKEN }}
+
+            # Merge PR
+            - name: Merge Pull Request
+              uses: juliangruber/merge-pull-request-action@v1
+              with:
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
+                  number: ${{ env.PULL_REQUEST_NUMBER }}
+                  method: squash
