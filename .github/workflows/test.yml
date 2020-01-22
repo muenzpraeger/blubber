@@ -1,5 +1,5 @@
 # Unique name for this workflow
-name: Salesforce DX CI (packaging)
+name: Test
 
 # Definition when the workflow should run
 on:
@@ -18,7 +18,7 @@ jobs:
 
             # Checkout the code in the pull request
             - name: 'Checkout source code'
-              runs: ls -lrt >> test2.txt
+              run: ls -lrt >> test2.txt
 
             # Re-add changes back to source
             - name: 'Create branch'
