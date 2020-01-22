@@ -26,7 +26,7 @@ jobs:
               with:
                   title: 'Added new package version ID'
                   commit-message: 'Added new package version ID ${{ github.ref }}'
-                  branch: 'auto/package-version-update'
+                  branch: 'auto/test-package-version-update'
                   token: ${{ secrets.GITHUB_TOKEN }}
 
             # Merge PR
