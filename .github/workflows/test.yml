@@ -24,7 +24,6 @@ jobs:
             - name: 'Create branch'
               uses: peter-evans/create-pull-request@v2
               with:
-                  branch: 'master'
                   title: 'Added new package version ID'
                   commit-message: 'Added new package version ID'
                   branch: 'auto/package-version-update'
