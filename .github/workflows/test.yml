@@ -36,3 +36,9 @@ jobs:
                   github-token: ${{ secrets.GITHUB_TOKEN }}
                   number: ${{ env.PULL_REQUEST_NUMBER }}
                   method: squash
+
+            - name: Delete PRs head branches
+              uses: dawidd6/action-delete-branch@master
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  numbers: ${{ env.PULL_REQUEST_NUMBER }}
