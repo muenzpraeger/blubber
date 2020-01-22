@@ -25,7 +25,7 @@ jobs:
               uses: peter-evans/create-pull-request@v2
               with:
                   title: 'Added new package version ID'
-                  commit-message: 'Added new package version ID'
+                  commit-message: 'Added new package version ID ${{ github.ref }}'
                   branch: 'auto/package-version-update'
                   token: ${{ secrets.GITHUB_TOKEN }}
 
