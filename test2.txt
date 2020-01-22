@@ -7,3 +7,6 @@ total 4
 total 4
 -rw-r--r-- 1 runner docker 226 Jan 22 12:10 test2.txt
 -rw-r--r-- 1 runner docker   0 Jan 22 12:10 test.txt
+total 4
+-rw-r--r-- 1 runner docker 341 Jan 22 12:18 test2.txt
+-rw-r--r-- 1 runner docker   0 Jan 22 12:18 test.txt
